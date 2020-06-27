@@ -8,7 +8,7 @@ const Menu = (props) => {
       <Head>
         <title>Menu - transporte</title>
       </Head>
-      <MenuView props={props} />
+      <MenuView { ...props } />
     </>
   );
 }

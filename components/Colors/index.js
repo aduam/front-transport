@@ -29,6 +29,11 @@ const Colors = {
   yellow2: '#C7C11A',
   yellow3: '#D6D01C',
   yellow4: '#E0D81D',
+  gray: '#fafafa',
+  gray1: '#e1e1e1',
+  gray2: '#c8c8c8',
+  gray3: '#afafaf',
+  gray4: '#969696',
 };
 
 export default Colors;

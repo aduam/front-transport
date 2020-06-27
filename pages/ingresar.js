@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import LoginView from '../views/login';
+import isLogged from '../hocs/isLogged';
 
 const Ingresar = (props) => {
   return (
@@ -12,4 +13,4 @@ const Ingresar = (props) => {
   );
 };
 
-export default Ingresar;
+export default isLogged(Ingresar);

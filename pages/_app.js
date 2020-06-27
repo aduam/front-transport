@@ -1,7 +1,7 @@
 import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
-import fetch from 'isomorphic-fetch';
+import 'react-notifications/lib/notifications.css';
 
 const theme = {
   colors: {
@@ -28,12 +28,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    color: rgba(38,38,38, 0.7);
   }
   input {
     border: none;
     background-color: transparent;
     outline: none;
     font-family: 'Lato', sans-serif;
+    color: rgba(38,38,38, 0.7);
     &:hover, &:active, &:active, &:focus {
       border: none;
       outline: none;
@@ -44,10 +46,19 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     outline: none;
     font-family: 'Lato', sans-serif;
+    color: rgba(38,38,38, 0.7);
     &:hover, &:active, &:active, &:focus {
       border: none;
       outline: none;
     }
+  }
+  a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(38,38,38, 0.7);
   }
 `;
 

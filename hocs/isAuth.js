@@ -6,7 +6,7 @@ const url = 'https://alan-api-node.herokuapp.com/api/me';
 
 const isAuth = WrappComponent => {
   const NewComponent = props => {
-    return <WrappComponent {...props } first='first hoc' />;
+    return <WrappComponent {...props } />;
   };
 
   NewComponent.getInitialProps = async ( ctx ) => {

@@ -1,20 +1,18 @@
 import styled from 'styled-components';
+import Colors from '../Colors';
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+  border: 1px solid ${Colors.gray3};
+  border-radius: 4px;
+  `;
 
 export const Form = styled.form`
+  padding: 8px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 400px;
-  padding: 16px;
   input {
-    margin-top: 5px;
     margin-bottom: 10px;
   }
 `;

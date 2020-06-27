@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Container } from './style';
 
-const Input = ({ id, name, type, onChange, value, required, className, placeholder }) => {
+const Input = ({ id, name, type, onChange, required, className, placeholder, refi }) => {
   return (
     <Container
       className={className}
@@ -10,8 +10,8 @@ const Input = ({ id, name, type, onChange, value, required, className, placehold
       type={type}
       placeholder={placeholder}
       onChange={onChange}
-      value={value}
       required={required}
+      ref={refi}
     />
   );
 };
@@ -21,7 +21,6 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string,
   onChange: PropTypes.func,
-  value: PropTypes.string,
   required: PropTypes.bool,
   className: PropTypes.string,
   placeholder: PropTypes.string,
@@ -30,7 +29,6 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   onChange: undefined,
-  value: null,
   required: false,
   placeholder: 'Ingresar...',
 };

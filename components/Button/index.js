@@ -8,7 +8,7 @@ const Button = ({ title, onClick, color, type, loading, textLoading }) => {
       color={color || 'blue'}
       type={type || 'submit'}
     >
-      {loading ? [<i className="fas fa-circle-notch fa-spin" />, textLoading] : title}
+      {loading ? [textLoading, <i style={{ marginLeft: 5, }} className="fas fa-circle-notch fa-spin" />] : title}
     </Container>
   );
 };

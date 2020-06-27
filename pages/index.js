@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import isLogged from '../hocs/isLogged';
 import HomeView from '../views/home';
 
 const Home = props => {
@@ -18,4 +19,4 @@ const Home = props => {
   );
 };
 
-export default Home;
+export default isLogged(Home);
