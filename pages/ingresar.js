@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import LoginView from '../views/login';
 import isLogged from '../hocs/isLogged';
+import LoginView from '../views/login';
 
 const Ingresar = (props) => {
   return (

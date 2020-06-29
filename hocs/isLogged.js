@@ -11,20 +11,20 @@ const isLogged = WrappComponent => {
 
   NewComponent.getInitialProps = async ( ctx ) => {
     const { req } = ctx;
-  const cookies = parseCookie(req)
-  cookies.authorization
-  const me = await fetch(url, {
-    method: 'GET',
-    headers:{
-      'Content-Type': 'application/json',
-      'authorization': cookies.authorization,
-    }
-  }).then(data => data.json());
+    const cookies = parseCookie(req)
+    cookies.authorization
+    const me = await fetch(url, {
+      method: 'GET',
+      headers:{
+        'Content-Type': 'application/json',
+        'authorization': cookies.authorization,
+      }
+    }).then(data => data.json());
 
-  if (me.data.me) {
-    redirect(ctx, '/menu')
-  }
-  return {};
+    if (me.data.me) {
+      redirect(ctx, '/menu')
+    }
+    return { logged: true };
   };
   return NewComponent;
 };

@@ -3,11 +3,11 @@ import Colors from '../Colors';
 
 export const Container = styled.button`
   padding: 5px 15px;
-  background-color: ${Colors.green};
+  background-color: ${({ color }) => color};
   color: white;
   font-size: 'Lato', sans-serif;
   font-size: 15px;
   &:hover {
-    background-color: ${Colors.green2};
+    background-color: ${({ bg }) => bg};
   }
 `;
