@@ -11,6 +11,7 @@ import ModalRemove from './sureRemove';
 import { Container, InnerContainer, InnerSidebar, Table, Paragraph, Main } from './style';
 
 const PendentView = ({ me, data, refresh }) => {
+  const [menu, setMenu] = useState(false);
   const [active, setActive] = useState({
     open: false,
     data: null,
@@ -99,10 +100,10 @@ const PendentView = ({ me, data, refresh }) => {
 
   return (
     <>
-      <Header me={me} />
+      <Header me={me} setMenu={setMenu} menu={menu} />
       <Container>
-        <InnerSidebar>
-          <Sidebar />
+        <InnerSidebar menu={menu}>
+          <Sidebar setMenu={setMenu} menu={menu} />
         </InnerSidebar>
         <Main>
           <InnerContainer>

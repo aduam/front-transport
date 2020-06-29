@@ -1,14 +1,16 @@
+import React, { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
 import { Container, InnerSidebar, InnerContainer } from './style';
 
-const MenuView = ({ router, me }) => {
+const MenuView = ({ me }) => {
+  const [menu, setMenu] = useState(false);
   return (
     <>
-      <Header me={me} />
+      <Header me={me} setMenu={setMenu} menu={menu} />
       <Container>
-        <InnerSidebar>
-          <Sidebar />
+        <InnerSidebar menu={menu}>
+          <Sidebar setMenu={setMenu} menu={menu} />
         </InnerSidebar>
         <InnerContainer>Menu =0)</InnerContainer>
       </Container>

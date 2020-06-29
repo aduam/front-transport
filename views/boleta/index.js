@@ -10,6 +10,7 @@ const url = 'https://alan-api-node.herokuapp.com/api/ticket';
 
 const BoletaView = ({ me }) => {
   const [cookies] = useCookies(['authorization']);
+  const [menu, setMenu] = useState(false);
   const [state, setState] = useState({
     loading: false,
     error: false,
@@ -71,10 +72,10 @@ const BoletaView = ({ me }) => {
 
   return (
     <>
-      <Header me={me} />
+      <Header me={me} setMenu={setMenu} menu={menu} />
       <Container>
-        <InnerSidebar>
-          <Sidebar />
+        <InnerSidebar menu={menu}>
+          <Sidebar setMenu={setMenu} menu={menu} />
         </InnerSidebar>
         <InnerContainer>
           <Ticket handleClick={handleClick} loading={state.loading} />

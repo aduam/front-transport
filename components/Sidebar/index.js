@@ -1,22 +1,35 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { Container, Anchor } from './style';
+import { Container, Anchor, ButtonTimes } from './style';
 
-const menu = [
+const menuItems = [
   { title: 'Menu', href: '/menu', },
   { title: 'Llenar boleta', href: '/boleta' },
   { title: 'Boletas pendientes', href: '/pendiente' },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ setMenu, menu }) => {
   return (
     <Container>
-      {menu.map((e, index) => (
+      <ButtonTimes onClick={() => setMenu(!menu)}><i class="far fa-times-circle" /></ButtonTimes>
+      {menuItems.map((e, index) => (
         <Link key={index} href={`${e.href}`}>
           <Anchor>{e.title}</Anchor>
         </Link>
       ))}
     </Container>
   );
+};
+
+Sidebar.propTypes = {
+  menu: PropTypes.bool,
+  setMunu: PropTypes.func,
+};
+
+Sidebar.defaultProps = {
+  menu: false,
+  setMenu: undefined,
 };
 
 export default Sidebar;

@@ -9,6 +9,11 @@ export const Container = styled.div`
 export const Paragraph = styled.p`
   color: white;
   margin-left: 10px;
+  display: none;
+
+  @media screen and (min-width: 570px) {
+    display: block;
+  }
 `;
 
 export const Icon = styled.i`

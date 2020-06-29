@@ -8,6 +8,7 @@ export const Header = styled.header`
   justify-content: center;
   background-color: black;
   opacity: 0.8;
+  z-index: 1;
 `;
 
 export const Nav = styled.nav`
@@ -29,14 +30,13 @@ export const Anchor = styled.a`
 
 export const Container = styled.main`
   background-color: #fafafa;
-  margin-top: 49px;
 `;
 
 export const InnerContainer = styled.div`
   background-color: black;
   opacity: 0.7;
   width: 100%;
-  height: calc(100vh - 49px);
+  height: calc(100vh);
   display: flex;
   justify-content: center;
   align-items: center;
