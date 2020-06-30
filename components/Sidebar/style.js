@@ -21,10 +21,6 @@ export const Anchor = styled.a`
   &:hover {
     background-color: ${Colors.gray1};
   }
-
-  ${props => props.active && `
-    background-color: ${Colors.blue};
-  `};
 `;
 
 export const ButtonTimes = styled.button`
