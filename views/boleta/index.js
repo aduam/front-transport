@@ -54,8 +54,8 @@ const BoletaView = ({ me, router }) => {
       return false;
     } else {
       setState({ ...state, data: data.data, loading: false });
-      toast.notify('Su solicitud a sido enviada con éxito!', {
-        duration: 8,
+      toast.notify('Su solicitud a sido enviada con éxito! revisé las boletas pendientes', {
+        duration: 10,
         type: "success",
         title: "Boleta agregada",
       });

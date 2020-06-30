@@ -22,7 +22,7 @@ const isLogged = WrappComponent => {
     }).then(data => data.json());
 
     if (me.data.me) {
-      redirect(ctx, '/menu')
+      redirect(ctx, '/pendiente')
     }
     return { logged: true };
   };

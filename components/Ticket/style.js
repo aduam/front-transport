@@ -12,6 +12,9 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
+  label {
+    margin-bottom: 5px;
+  }
   input {
     margin-bottom: 10px;
   }
