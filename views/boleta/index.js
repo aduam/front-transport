@@ -8,7 +8,7 @@ import { Container, InnerContainer, InnerSidebar } from './style';
 
 const url = 'https://alan-api-node.herokuapp.com/api/ticket';
 
-const BoletaView = ({ me }) => {
+const BoletaView = ({ me, router }) => {
   const [cookies] = useCookies(['authorization']);
   const [menu, setMenu] = useState(false);
   const [state, setState] = useState({

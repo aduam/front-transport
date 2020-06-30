@@ -3,9 +3,9 @@ import Head from 'next/head';
 import fetch from 'isomorphic-fetch';
 import isAuth from '../hocs/isAuth';
 import { parseCookie } from '../lib/parseCookie';
-import PendentView from '../views/pendiente';
+import InProgressVIew from '../views/in_progress';
 
-const url = 'https://alan-api-node.herokuapp.com/api/ticket/pending';
+const url = 'https://alan-api-node.herokuapp.com/api/ticket/in_progress';
 
 async function fetchData(ctx) {
   const req = ctx ? ctx.req : undefined;
@@ -23,7 +23,7 @@ async function fetchData(ctx) {
   return { data };
 }
 
-const Pendiente = (props) => {
+const InProgress = (props) => {
   const [data, setData] = useState(props.data.data);
   async function refresh() {
     const refreshedProps = await fetchData();
@@ -34,11 +34,11 @@ const Pendiente = (props) => {
       <Head>
         <title>Boletas pendientes - transporte</title>
       </Head>
-      <PendentView me={props.me} data={data} refresh={refresh} />
+      <InProgressVIew me={props.me} data={data} refresh={refresh} />
     </>
   );
 };
 
-Pendiente.getInitialProps = (ctx) => fetchData(ctx);
+InProgress.getInitialProps = (ctx) => fetchData(ctx);
 
-export default isAuth(Pendiente);
+export default isAuth(InProgress);
